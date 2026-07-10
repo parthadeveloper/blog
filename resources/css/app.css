@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* 1. Classic Editorial (Light Theme) */
+  :root, .theme-emerald {
+    --color-primary: 15 23 42;          /* Stark Slate Navy 900 */
+    --color-primary-hover: 51 65 85;    /* Slate 700 */
+    --bg-main: 255 255 255;             /* Stark Pure White */
+    --bg-card: 250 250 250;             /* Off-White Card */
+    --text-main: 15 23 42;              /* Slate 900 */
+    --text-muted: 100 116 139;          /* Slate 500 */
+    --border-color: 226 232 240;        /* Cool Grey Border */
+    --border-focus: 15 23 42;           /* Navy Focus */
+    --color-accent: 241 245 249;        /* Warm Accent Bg */
+    --text-accent: 15 23 42;            /* Accent Text */
+    --shadow-color: 15 23 42;
+    --shadow-opacity: 0.03;
+  }
+
+  /* 2. Nordic Slate (Corporate Dark Theme) */
+  .theme-dark-slate {
+    --color-primary: 96 165 250;        /* Soft Blue 400 */
+    --color-primary-hover: 147 197 253;  /* Soft Blue 300 */
+    --bg-main: 15 23 42;                /* Tailwind-style slate-900 */
+    --bg-card: 30 41 59;                /* Slate 800 Card */
+    --text-main: 248 250 252;           /* Pristine White Text */
+    --text-muted: 148 163 184;          /* Slate 400 Muted */
+    --border-color: 51 65 85;           /* Slate 700 Border */
+    --border-focus: 96 165 250;         /* Soft Blue Focus */
+    --color-accent: 51 65 85;           /* Accent background */
+    --text-accent: 96 165 250;          /* Accent text */
+    --shadow-color: 2 6 23;
+    --shadow-opacity: 0.35;
+  }
+
+  /* 3. Deep Ocean Blue (Enterprise Dark Theme) */
+  .theme-cyberpunk {
+    --color-primary: 14 165 233;        /* Icy Cyan Sky 500 */
+    --color-primary-hover: 56 189 248;  /* Cyan Sky 400 */
+    --bg-main: 10 15 29;                /* Deep Corporate Navy */
+    --bg-card: 17 24 43;                /* Ocean Card */
+    --text-main: 241 245 249;           /* Crystal Light Text */
+    --text-muted: 148 163 184;          /* Slate Grey Muted */
+    --border-color: 30 41 59;           /* Midnight Ocean Border */
+    --border-focus: 14 165 233;         /* Cyan Focus */
+    --color-accent: 30 41 59;           /* Accent Bg */
+    --text-accent: 14 165 233;          /* Accent Text */
+    --shadow-color: 2 6 23;
+    --shadow-opacity: 0.4;
+  }
+
+  /* 4. Warm Editorial (Minimal Cream Theme) */
+  .theme-retro-amber {
+    --color-primary: 20 20 20;          /* Charcoal Black */
+    --color-primary-hover: 80 80 80;    /* Muted Charcoal */
+    --bg-main: 251 250 247;             /* Sophisticated Ivory/Cream */
+    --bg-card: 255 255 255;             /* Pure White Card */
+    --text-main: 30 30 30;              /* Carbon Text */
+    --text-muted: 110 110 110;          /* Warm Muted Grey */
+    --border-color: 236 234 228;        /* Soft Cream Outline */
+    --border-focus: 20 20 20;           /* Focus Charcoal */
+    --color-accent: 245 243 236;        /* Accent Ivory */
+    --text-accent: 20 20 20;            /* Accent Text */
+    --shadow-color: 110 110 110;
+    --shadow-opacity: 0.05;
+  }
+
+  /* 5. Slate Tech (Minimal Light Theme) */
+  .theme-nordic-snow {
+    --color-primary: 37 99 235;         /* Royal Blue 600 */
+    --color-primary-hover: 29 78 216;   /* Royal Blue 700 */
+    --bg-main: 248 250 252;             /* Sleek Slate-50 Background */
+    --bg-card: 255 255 255;             /* White Card */
+    --text-main: 15 23 42;              /* Slate 900 */
+    --text-muted: 71 85 105;            /* Slate 600 Muted */
+    --border-color: 226 232 240;        /* Slate 200 Border */
+    --border-focus: 37 99 235;          /* Blue Focus */
+    --color-accent: 239 246 255;        /* Light Blue Accent */
+    --text-accent: 29 78 216;           /* Accent Text */
+    --shadow-color: 148 163 184;
+    --shadow-opacity: 0.08;
+  }
+
+  /* 6. Royal Blue Corporate (Light Theme) */
+  .theme-corp-indigo {
+    --color-primary: 29 78 216;         /* Royal Blue 700 */
+    --color-primary-hover: 30 58 138;   /* Royal Blue 900 */
+    --bg-main: 255 255 255;             /* Stark White */
+    --bg-card: 250 250 250;             /* Off-white Card */
+    --text-main: 17 24 39;              /* Grey 900 */
+    --text-muted: 107 114 128;          /* Grey 500 */
+    --border-color: 229 231 235;        /* Light Grey Border */
+    --border-focus: 29 78 216;          /* Blue Focus */
+    --color-accent: 239 246 255;        /* Accent Blue */
+    --text-accent: 29 78 216;           /* Accent Text */
+    --shadow-color: 17 24 39;
+    --shadow-opacity: 0.04;
+  }
+
+  /* 7. Modern Obsidian (Sleek Dark Theme) */
+  .theme-emerald-pine {
+    --color-primary: 34 197 94;         /* Sleek Green 500 */
+    --color-primary-hover: 74 222 128;  /* Sleek Green 400 */
+    --bg-main: 24 24 27;                /* Clean Obsidian Zn-900 */
+    --bg-card: 39 39 42;                /* Zn-800 Card */
+    --text-main: 250 250 250;           /* Soft White */
+    --text-muted: 161 161 170;          /* Zn-400 Muted */
+    --border-color: 63 63 70;           /* Zn-700 Border */
+    --border-focus: 34 197 94;          /* Green Focus */
+    --color-accent: 63 63 70;           /* Accent Background */
+    --text-accent: 34 197 94;           /* Green Accent Text */
+    --shadow-color: 9 9 11;
+    --shadow-opacity: 0.35;
+  }
+
+  /* 8. Teal Professional (Light Theme) */
+  .theme-teal-minimal {
+    --color-primary: 13 148 136;        /* Deep Teal 600 */
+    --color-primary-hover: 15 118 110;  /* Deep Teal 700 */
+    --bg-main: 253 253 253;             /* Clean Crisp White */
+    --bg-card: 255 255 255;             /* Card White */
+    --text-main: 20 27 26;              /* Teal Black text */
+    --text-muted: 100 116 115;          /* Teal Muted */
+    --border-color: 228 233 232;        /* Soft Teal Border */
+    --border-focus: 13 148 136;         /* Teal Focus */
+    --color-accent: 240 253 250;        /* Teal 50 Accent */
+    --text-accent: 15 118 110;          /* Teal Accent Text */
+    --shadow-color: 20 27 26;
+    --shadow-opacity: 0.03;
+  }
+
+  /* 9. Coal Carbon (Corporate Dark Theme) */
+  .theme-deep-plum {
+    --color-primary: 45 212 191;        /* Crisp Teal 400 */
+    --color-primary-hover: 94 234 212;  /* Teal 300 */
+    --bg-main: 11 15 25;                /* Slate Carbon 950 */
+    --bg-card: 18 24 38;                /* Carbon Card */
+    --text-main: 243 244 246;           /* Slate 100 text */
+    --text-muted: 156 163 175;          /* Slate 400 muted */
+    --border-color: 31 41 55;           /* Fine slate border */
+    --border-focus: 45 212 191;         /* Teal focus */
+    --color-accent: 31 41 55;           /* Accent background */
+    --text-accent: 45 212 191;          /* Teal Accent Text */
+    --shadow-color: 0 0 0;
+    --shadow-opacity: 0.45;
+  }
+
+  /* 10. Minimalist Ink (Pure Light Theme) */
+  .theme-warm-terracotta {
+    --color-primary: 0 0 0;             /* Stark Pure Ink Black */
+    --color-primary-hover: 64 64 64;    /* Neutral Grey 700 */
+    --bg-main: 255 255 255;             /* Stark White */
+    --bg-card: 255 255 255;             /* Stark White Card */
+    --text-main: 0 0 0;                 /* Pure Black Text */
+    --text-muted: 115 115 115;          /* Neutral Muted Grey */
+    --border-color: 229 229 229;        /* Neutral Light Border */
+    --border-focus: 0 0 0;              /* Focus Stark Black */
+    --color-accent: 245 245 245;        /* Neutral Light Accent */
+    --text-accent: 0 0 0;               /* Accent text */
+    --shadow-color: 0 0 0;
+    --shadow-opacity: 0.05;
+  }
+}

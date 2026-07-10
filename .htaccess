@@ -1,0 +1,23 @@
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Never show directory listings
+    Options -Indexes
+
+    # 1. Clean URL Redirect: /ANY_SUBDIR/public/X → /ANY_SUBDIR/X dynamically
+    RewriteCond %{THE_REQUEST} \s/([^/]+)/public/([^\s?]*) [NC]
+    RewriteRule ^ /%1/%2 [L,R=301]
+
+    # 2. Dynamic Asset Routing: If the requested asset exists inside the public/ subfolder,
+    # transparently serve it from public/ relative to the current directory.
+    # E.g. /subdir/build/assets/app.css -> serves public/build/assets/app.css
+    RewriteCond %{REQUEST_URI} ^/([^/]+)/(.*)$
+    RewriteCond %{DOCUMENT_ROOT}/%1/public/%2 -f
+    RewriteRule ^(.*)$ public/$1 [L,QSA]
+
+    # 3. Everything else -> Laravel Front Controller
+    # Resolves to the local public/index.php dynamically
+    RewriteRule ^(.*)$ public/index.php [L,QSA]
+</IfModule>
